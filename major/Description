@@ -1,0 +1,117 @@
+First Create a google Collab Account and in the new files import the packages of the necessary libaraires i.e,
+!pip install transformers
+!pip install googlesearch-python
+!pip install google
+!pip install beautifulsoup4
+!pip install requests
+After sucessfull installation of the packages we get the following details:
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting transformers
+  Downloading transformers-4.29.2-py3-none-any.whl (7.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 56.2 MB/s eta 0:00:00
+Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from transformers) (3.12.0)
+Collecting huggingface-hub<1.0,>=0.14.1 (from transformers)
+  Downloading huggingface_hub-0.14.1-py3-none-any.whl (224 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 24.5 MB/s eta 0:00:00
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.10/dist-packages (from transformers) (1.22.4)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from transformers) (23.1)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.10/dist-packages (from transformers) (6.0)
+Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.10/dist-packages (from transformers) (2022.10.31)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from transformers) (2.27.1)
+Collecting tokenizers!=0.11.3,<0.14,>=0.11.1 (from transformers)
+  Downloading tokenizers-0.13.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 103.2 MB/s eta 0:00:00
+Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.10/dist-packages (from transformers) (4.65.0)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.10/dist-packages (from huggingface-hub<1.0,>=0.14.1->transformers) (2023.4.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.10/dist-packages (from huggingface-hub<1.0,>=0.14.1->transformers) (4.5.0)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->transformers) (1.26.15)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->transformers) (2022.12.7)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests->transformers) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->transformers) (3.4)
+Installing collected packages: tokenizers, huggingface-hub, transformers
+Successfully installed huggingface-hub-0.14.1 tokenizers-0.13.3 transformers-4.29.2
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting googlesearch-python
+  Downloading googlesearch-python-1.2.3.tar.gz (3.9 kB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: beautifulsoup4>=4.9 in /usr/local/lib/python3.10/dist-packages (from googlesearch-python) (4.11.2)
+Requirement already satisfied: requests>=2.20 in /usr/local/lib/python3.10/dist-packages (from googlesearch-python) (2.27.1)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4>=4.9->googlesearch-python) (2.4.1)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests>=2.20->googlesearch-python) (1.26.15)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests>=2.20->googlesearch-python) (2022.12.7)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests>=2.20->googlesearch-python) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests>=2.20->googlesearch-python) (3.4)
+Building wheels for collected packages: googlesearch-python
+  Building wheel for googlesearch-python (setup.py) ... done
+  Created wheel for googlesearch-python: filename=googlesearch_python-1.2.3-py3-none-any.whl size=4212 sha256=c1793bec2935b4dfecf22146d41fcb5ead7d084e930df6cf46a78cb3a1b77ea2
+  Stored in directory: /root/.cache/pip/wheels/98/24/e9/6c225502948c629b01cc895f86406819281ef0da385f3eb669
+Successfully built googlesearch-python
+Installing collected packages: googlesearch-python
+Successfully installed googlesearch-python-1.2.3
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: google in /usr/local/lib/python3.10/dist-packages (2.0.3)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from google) (4.11.2)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4->google) (2.4.1)
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (4.11.2)
+Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4) (2.4.1)
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (2.27.1)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests) (1.26.15)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests) (2022.12.7)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests) (3.4)
+after that write the main code in the main section 
+#Code
+# Import the necessary libraries
+from transformers import pipeline
+from googlesearch import search
+from bs4 import BeautifulSoup
+import requests
+
+# Get the passage from the user
+passage = input("Enter the passage: ")
+
+# Create a list of questions from the user
+num_questions = int(input("How many questions do you have? "))
+questions = []
+for i in range(num_questions):
+    question = input(f"Enter question {i+1}: ")
+    questions.append(question)
+
+# Create the question answering pipeline using the 'distilbert-base-uncased-distilled-squad' model
+qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
+
+# Loop through each question and find the answer
+for i, question in enumerate(questions):
+    print(f"\nQ{i+1}: {question}")
+    
+    # Search for the answer in the given passage
+    answer = qa_pipeline(question=question, context=passage)
+    
+    # If the answer is found in the passage, print it
+    if answer["score"] > 0.5:
+        print(f"A: {answer['answer']}")
+    else:
+        # If the answer is not found in the passage, search the internet for the answer
+        query = f"{question} {passage}"
+        try:
+            urls = search(query, num_results=1)
+            if urls:
+                url = next(urls)
+                headers = {
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36"
+                }
+                res = requests.get(url, headers=headers)
+                soup = BeautifulSoup(res.text, "html.parser")
+                ans = soup.select_one(".BNeawe i")
+                if ans:
+                    print(f"A: {ans.get_text()}")
+                else:
+                    print("A: Answer not available.")
+                print(f"Link: {url}")
+            else:
+                print("A: Answer not available.")
+        except:
+            print("A: Error occurred while searching for the answer.")
+# done with code and we get the output of the dynamic QAS.
